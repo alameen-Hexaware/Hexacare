@@ -1,0 +1,19 @@
+<h1>
+  Our Doctor
+</h1>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Contact Number</td>
+    <td>Specialization</td>
+  </tr>
+  <tr *ngFor="let doc of doctorList">
+    <td>{{doc.Id}}</td>
+    <td>{{doc.Name}}</td>
+    <td>{{doc.Email}}</td>
+    <td>{{doc.Phone}}</td>
+    <td>{{doc.Specialization}}</td>
+  </tr>
+</table>
