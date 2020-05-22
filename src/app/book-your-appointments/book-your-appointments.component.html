@@ -24,7 +24,7 @@
                     Patient Contact Number
                 </td>
                 <td>
-                    <input type="text" formControlName="patientContactNumber">
+                    <input type="number" formControlName="patientContactNumber">
                 </td>
                 <td>
                     <div style="color: red;"
@@ -38,7 +38,10 @@
                     Specialization
                 </td>
                 <td>
-                    <input type="text" formControlName="specialization">
+                    <select formControlName="specialization">
+                        <option value="">--Select--</option>
+                        <option *ngFor="let item of specializationList" value="{{item.Name}}">{{ item.Name}}</option>
+                    </select>
                 </td>
                 <td>
                     <div style="color: red;"
@@ -52,7 +55,10 @@
                     Doctor
                 </td>
                 <td>
-                    <input type="text" formControlName="doctor">
+                    <select formControlName="doctor">
+                        <option value="">--Select--</option>
+                        <option *ngFor="let item of doctorList" value="{{item.Name}}">{{ item.Name}}</option>
+                    </select>
                 </td>
                 <td>
                     <div style="color: red;"
@@ -66,7 +72,7 @@
                     Available Dates
                 </td>
                 <td>
-                    <input type="text" formControlName="availableDates">
+                    <input type="date" formControlName="availableDates">
                 </td>
                 <td>
                     <div style="color: red;"
@@ -75,9 +81,9 @@
                     </div>
                 </td>
             </tr>
-            <tr>
+            <tr [ngStyle]="{'visibility':appointmentForm.valid?'visible':'hidden'}" >
                 <td colspan="3">
-                    <input type="submit" value="Book Appointment">
+                    <input type="submit"  value="Book Appointment">
                 </td>
             </tr>
         </table>

@@ -1,0 +1,54 @@
+{
+    "Doctor": [
+        {
+            "Id": 1,
+            "Name": "Raja",
+            "Email": "Raja@Apallo.com",
+            "Phone": "9874567823",
+            "Specialization": "Gendral"
+        },
+        {
+            "Id": 2,
+            "Name": "Swathi",
+            "Email": "Swathi@Apallo.com",
+            "Phone": "9874534823",
+            "Specialization": "Neuro"
+        }
+    ],
+    "Specialization": [
+        {
+            "Id": 1,
+            "Name": "General"
+        },
+        {
+            "Id": 2,
+            "Name": "Neuro"
+        }
+    ],
+    "appointments": [
+        {
+            "id": 1,
+            "patientname": "Alameen",
+            "patientcontactnumber": "9944615499",
+            "doctorname": "Swathi",
+            "specialization": "Neuro",
+            "appointmentdate": "01/01/2020"
+        },
+        {
+            "id": 2,
+            "patientname": "Mubeen",
+            "patientcontactnumber": "9786486104",
+            "doctorname": "Raja",
+            "specialization": "Gendral",
+            "appointmentdate": "02/01/2020"
+        },
+        {
+            "id": 3,
+            "patientname": "Rekha",
+            "patientcontactnumber": "9786039240",
+            "doctorname": "Raja",
+            "specialization": "Gendral",
+            "appointmentdate": "03/01/2020"
+        }
+    ]
+}
