@@ -5,6 +5,10 @@
     font-weight: 500;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
+    
+}
+.header a{
+  text-decoration: none;
 }
 ul.menu {
     list-style-type: none;

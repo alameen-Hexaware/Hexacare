@@ -1,1 +1,86 @@
-<p>book-your-appointments works!</p>
+<h3 style="text-align: center;">
+    Book your appointment
+</h3>
+
+<div style="vertical-align: middle;">
+    <form [formGroup]="appointmentForm" (ngSubmit)="submit()">
+        <table>
+            <tr>
+                <td>
+                    Patient Name
+                </td>
+                <td>
+                    <input type="text" formControlName="patientName">
+                </td>
+                <td>
+                    <div style="color: red;"
+                        *ngIf="appointmentForm.get('patientName').touched && appointmentForm.get('patientName').invalid">
+                        Patient Name is required
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Patient Contact Number
+                </td>
+                <td>
+                    <input type="text" formControlName="patientContactNumber">
+                </td>
+                <td>
+                    <div style="color: red;"
+                        *ngIf="appointmentForm.get('patientContactNumber').touched && appointmentForm.get('patientContactNumber').invalid">
+                        Patient Contact Number is required
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Specialization
+                </td>
+                <td>
+                    <input type="text" formControlName="specialization">
+                </td>
+                <td>
+                    <div style="color: red;"
+                        *ngIf="appointmentForm.get('specialization').touched && appointmentForm.get('specialization').invalid">
+                        Specialization is required
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Doctor
+                </td>
+                <td>
+                    <input type="text" formControlName="doctor">
+                </td>
+                <td>
+                    <div style="color: red;"
+                        *ngIf="appointmentForm.get('doctor').touched && appointmentForm.get('doctor').invalid">
+                        Doctor is required
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Available Dates
+                </td>
+                <td>
+                    <input type="text" formControlName="availableDates">
+                </td>
+                <td>
+                    <div style="color: red;"
+                        *ngIf="appointmentForm.get('availableDates').touched && appointmentForm.get('availableDates').invalid">
+                        Available Dates is required
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="submit" value="Book Appointment">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>

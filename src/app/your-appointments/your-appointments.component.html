@@ -1,15 +1,14 @@
-<h4 style="text-align: center;">Your Visit</h4>
+<h3 style="text-align: center;">
+    Your Visit
+</h3>
 <div style="text-align: center;">
     <form [formGroup]="appointmentForm" (ngSubmit)="submit()">
         Contact Number :
         <input type="text" formControlName="contact" />
+        <input type="submit" value="Search">
         <div style="color: red;"
             *ngIf="appointmentForm.get('contact').touched && appointmentForm.get('contact').invalid">
             Contact Number is required
         </div>
-        <br />
-        <input type="submit" value="Save">
     </form>
 </div>
-
-<a routerLink="/ViewAppointments/1" >Appointment 1</a>

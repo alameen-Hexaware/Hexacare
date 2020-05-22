@@ -28,12 +28,15 @@ export class YourAppointmentsComponent implements OnInit {
     const contact = this.appointmentForm.get("contact").value;
     this.appointmentService.GetAppointmentByContact(contact).subscribe(data => {
       this.responseObj = data;
-      if(this.responseObj){
+      if(this.responseObj.id != undefined || this.responseObj.id == null){
         this.router.navigate(["ViewAppointments/",this.responseObj[0].id]);
+      }else{
+        this.router.navigate(["Error"]);
       }
+
     },(err:HttpErrorResponse)=>{
       console.log("Error in Request :"+err.message)
-      //this.router.navigate(["Error"]);
+      this.router.navigate(["Error"]);
     });
     console.log("Submited");
     

@@ -10,6 +10,8 @@ import { YourAppointmentsComponent } from './your-appointments/your-appointments
 import { BookYourAppointmentsComponent } from './book-your-appointments/book-your-appointments.component';
 import { ViewAppointmentComponent } from './ViewAppointment/ViewAppointment.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ErrorComponent } from './error/error.component';
 
 const route: Routes = [
   { path: "", redirectTo: "Home" , pathMatch:"full" },
@@ -19,6 +21,7 @@ const route: Routes = [
   { path: "YourAppointments", component: YourAppointmentsComponent },
   { path: "ViewAppointments/:id", component: ViewAppointmentComponent },
   { path: "BookYourAppointments", component: BookYourAppointmentsComponent },
+  { path: "Error", component: ErrorComponent },
   { path: "**", component: PageNotFoundComponent },
 ]
 @NgModule({
@@ -30,14 +33,18 @@ const route: Routes = [
       OurSpecializationComponent,
       YourAppointmentsComponent,
       BookYourAppointmentsComponent,
-      ViewAppointmentComponent
+      ViewAppointmentComponent,
+      ErrorComponent
    ],
    imports: [
       BrowserModule,
       RouterModule.forRoot(route),
-      HttpClientModule
+      HttpClientModule,
+      ReactiveFormsModule,
+      FormsModule
    ],
    providers: [],
+
    bootstrap: [
       AppComponent
    ]
