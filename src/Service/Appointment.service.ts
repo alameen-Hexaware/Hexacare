@@ -17,6 +17,11 @@ GetAppointmentByContact(contactNumber:string):Observable<Appointment>{
   return this.http.get<Appointment>("http://localhost:3000/Appointments?patientcontactnumber="+contactNumber)
 }
 GetAppointmentById(appointmentId: number) :Observable<Appointment>{
-  return this.http.get<Appointment>("http://localhost:3000/Appointments/"+appointmentId)
+  return this.http.get<Appointment>("http://localhost:3000/Appointments/"+appointmentId);
 }
+
+PostAppointment(model:Appointment) :Observable<Appointment>{
+  return this.http.post<Appointment>("http://localhost:3000/Appointments/",model);
+}
+
 }

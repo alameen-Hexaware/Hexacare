@@ -81,12 +81,13 @@
                     </div>
                 </td>
             </tr>
-            <tr [ngStyle]="{'visibility':appointmentForm.valid?'visible':'hidden'}" >
+            <tr [ngStyle]="{'visibility':appointmentForm.valid?'visible':'hidden'}">
                 <td colspan="3">
                     <input type="submit"  value="Book Appointment">
                 </td>
             </tr>
         </table>
     </form>
-
 </div>
+
+<div>{{responseModel | json}}</div>
